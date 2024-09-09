@@ -1,10 +1,24 @@
 import React from 'react'
 import { routes } from './utils/routes'
 import { Link } from 'react-router-dom'
+import { useContextGlobal } from './utils/global.context'
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Navbar = () => {
+
+  const {theme,setTheme} = useContextGlobal();
+
+  const handleSwitch = (event) => {
+    setTheme ( (state)=> (state === "Light" ? "Dark" : "Light"))
+    console.log(theme)
+    let color = theme
+    console.log(color)
+    const body = document.querySelector("body");
+    body.setAttribute('id',color)
+  }
+
+ 
 
   return (
     <nav>
@@ -19,7 +33,7 @@ const Navbar = () => {
         <h4>Destacados</h4>
       </Link>
       {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
-      <button>Change theme</button>
+      <button onClick={handleSwitch}>{theme}</button>
     </nav>
   )
 }

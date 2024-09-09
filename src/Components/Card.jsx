@@ -2,7 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 
+
 const Card = (props) => {
+
 
   const addFav = ()=>{
     // Aqui iria la logica para agregar la Card en el localStorage

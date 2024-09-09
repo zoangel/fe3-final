@@ -7,6 +7,10 @@ const ContextGlobal = createContext();
 const ContextProvider = ({ children }) => {
   //Aqui deberan implementar la logica propia del Context, utilizando el hook useMemo
 
+  const [theme, setTheme] = useState("Light")
+
+  
+
   const [dentistas, setDentistas] = useState([]);
 
   const url = "https://jsonplaceholder.typicode.com/users";
@@ -23,7 +27,7 @@ const ContextProvider = ({ children }) => {
 
 
   return (
-    <ContextGlobal.Provider value={{setDentistas,dentistas}}>
+    <ContextGlobal.Provider value={{dentistas,theme,setTheme}}>
       {children}
     </ContextGlobal.Provider>
   );

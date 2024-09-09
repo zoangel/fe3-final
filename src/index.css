@@ -7,6 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -31,7 +32,6 @@ nav{
 }
 
 a{
-  color: #000;
   text-decoration: none;
   margin: 5px;
   cursor: pointer;
@@ -119,4 +119,14 @@ tr:nth-child(even) {
 }
 .dark > a {
   color: white;
+}
+
+#Dark {
+  background-color: #000;
+  color: white;
+}
+
+#Light {
+  background-color: white;
+  color: black;
 }
