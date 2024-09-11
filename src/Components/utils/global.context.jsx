@@ -12,7 +12,6 @@ const ContextProvider = ({ children }) => {
   const [theme, setTheme] = useState("Light")
   const [favs, setFavs] = useState(lsFavs);
   
-
   const [dentistas, setDentistas] = useState([]);
 
   const url = "https://jsonplaceholder.typicode.com/users";
@@ -21,8 +20,7 @@ const ContextProvider = ({ children }) => {
 
     axios(url).then( (response) => {
       console.log(response.data)
-      setDentistas(response.data)
-      
+      setDentistas(response.data)      
     })
   }, []);
 

@@ -17,7 +17,7 @@ function App() {
         <Route path={routes.inicio} element={<Home/> } />
         <Route path={routes.contacto} element={<Contact/> } />
         <Route path={routes.destacados} element={<Favs/> } />
-        <Route path="detalles/id" element={<Detail/> } />
+        <Route path={routes.detalles} element={<Detail/> } />
       </Routes>
       <Footer/>
     </>
