@@ -4,11 +4,13 @@ export const initialState = {theme: "", data: []}
 
 const ContextGlobal = createContext();
 
+const lsFavs = JSON.parse(localStorage.getItem("favs")) || [];
+
 const ContextProvider = ({ children }) => {
   //Aqui deberan implementar la logica propia del Context, utilizando el hook useMemo
 
   const [theme, setTheme] = useState("Light")
-
+  const [favs, setFavs] = useState(lsFavs);
   
 
   const [dentistas, setDentistas] = useState([]);
@@ -24,10 +26,14 @@ const ContextProvider = ({ children }) => {
     })
   }, []);
 
+  useEffect(() => {
+    localStorage.setItem("favs", JSON.stringify(favs));
+  }, [favs]);
+
 
 
   return (
-    <ContextGlobal.Provider value={{dentistas,theme,setTheme}}>
+    <ContextGlobal.Provider value={{dentistas,theme,setTheme,favs,setFavs}}>
       {children}
     </ContextGlobal.Provider>
   );

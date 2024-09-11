@@ -15,7 +15,7 @@ const Home = () => {
       <div className='card-grid'>
         {/* Aqui deberias renderizar las cards */}
         { dentistas.map( (dentista)=> (
-          <Card key={dentista.id} dentista = {dentista} />
+          <Card key={dentista.index} dentista = {dentista} />
         ))}
       </div>
     </main>
