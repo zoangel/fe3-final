@@ -6,14 +6,14 @@ import { useContextGlobal } from "../Components/utils/global.context";
 
 const Favs = () => {
 
-  const {favs} = useContextGlobal();
+  const {state} = useContextGlobal();
   return (
     <>
       <h1>Dentists Favs</h1>
       <div className="card-grid">
         {/* este componente debe consumir los destacados del localStorage */}
         {/* Deberan renderizar una Card por cada uno de ellos */}
-        {favs.map( (dentista) => (
+        {state.favs.map( (dentista) => (
           <Card key={dentista.id} dentista = {dentista}/>
         ))}
       </div>

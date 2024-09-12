@@ -1,22 +1,26 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { routes } from './utils/routes'
 import { Link } from 'react-router-dom'
 import { useContextGlobal } from './utils/global.context'
+import { type } from '@testing-library/user-event/dist/type'
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Navbar = () => {
 
-  const {theme,setTheme} = useContextGlobal();
+  const {state,dispatch} = useContextGlobal();
 
-  const handleSwitch = (event) => {
-    setTheme ( (state)=> (state === "Light" ? "Dark" : "Light"))
-    console.log(theme)
-    let color = theme
+  const handleSwitch = () => {
+    // setTheme ( (state)=> (state === "Light" ? "Dark" : "Light"))
+    dispatch( {type: "SET_THEME", payload: state.theme === "Light" ? "Dark" : "Light"})
+    console.log(state.theme)
+    let color = state.theme
     console.log(color)
     const body = document.querySelector("body");
     body.setAttribute('id',color)
   }
+
+  
 
  
 
@@ -33,7 +37,7 @@ const Navbar = () => {
         <h4>Destacados</h4>
       </Link>
       {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
-      <button onClick={handleSwitch}>{theme}</button>
+      <button onClick={handleSwitch}>{state.theme}</button>
     </nav>
   )
 }

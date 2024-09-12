@@ -1,18 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useContextGlobal } from "./utils/global.context";
 
 const Card = (props) => {
 
+  
   const dentista = props.dentista
-  const { favs,setFavs } = useContextGlobal();
+  console.log(dentista)
+
+  const { state, dispatch } = useContextGlobal();
+
+  console.log(state.favs)
+
+  const isFav = state.favs.find((fav) =>  fav.id == dentista.id);
+  console.log(isFav);
+
   const addFav = () => {
-    setFavs((favs) => [...favs, dentista]);
-    console.log(favs)
+    dispatch({ type: isFav ? "REMOVE_FAVS" : "SET_FAVS", payload: dentista });
   };
   
-  
-  console.log(dentista)
   return (
     <div className="card">
 
@@ -24,7 +30,7 @@ const Card = (props) => {
           <button>Ver detalles</button>
         </Link>
 
-        <button onClick={addFav} className="favButton">❤️</button>
+        <button onClick={addFav} className="favButton">{isFav ? "❤️" : "🖤"}</button>
     </div>
   );
 };
