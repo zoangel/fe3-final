@@ -22,11 +22,15 @@ const Detail = () => {
 
   return (
     <>
-      <h1>Dentista {detail.name} </h1>
-      <h3>Id: {detail.id}</h3>
-      <h3>Email: {detail.email}</h3>
-      <h3>Telefono: {detail.phone}</h3>
-      <h3>Sitio web: {detail.website}</h3>
+    <main className="main" >
+      <div>
+        <h1>Dentista {detail.name} </h1>
+        <h3>Id: {detail.id}</h3>
+        <h3>Email: {detail.email}</h3>
+        <h3>Telefono: {detail.phone}</h3>
+        <h3>Sitio web: {detail.website}</h3>
+      </div>
+      </main>
     </>
   )
 }

@@ -3,9 +3,6 @@ import Message from "./Message";
 import MessageError from "./MessageError";
 
 const Form = () => {
-
-  
-
   const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
   const [flag, setFlag] = useState(false);
   const [flagError, setFlagError] = useState(false);

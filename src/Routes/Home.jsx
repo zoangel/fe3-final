@@ -10,7 +10,7 @@ const Home = () => {
  const {state} = useContextGlobal();
 
   return (
-    <main className="" >
+    <main className="main" >
       <h1>Home</h1>
       <div className='card-grid'>
         { state.dentistas.map( (dentista)=> (
