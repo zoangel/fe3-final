@@ -20,10 +20,6 @@ const Navbar = () => {
     body.setAttribute('id',color)
   }
 
-  
-
- 
-
   return (
     <nav>
       {/* Aqui deberan agregar los liks correspondientes a las rutas definidas */}
@@ -37,7 +33,7 @@ const Navbar = () => {
         <h4>Destacados</h4>
       </Link>
       {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
-      <button onClick={handleSwitch}>{state.theme}</button>
+      <button onClick={handleSwitch}>{state.theme==='Dark' ? 'Modo noche 🌚': 'Modo día 🌞'}</button>
     </nav>
   )
 }
