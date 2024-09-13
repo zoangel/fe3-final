@@ -21,10 +21,10 @@ const Card = (props) => {
   
   return (
     <div className="card">
-        <h3>Nombre:{dentista.name}</h3>
+        <h3>Nombre: {dentista.name}</h3>
         <img src="/images/dentista.jpg" width="200px"></img>
-        <h4>Usuario:{dentista.username}</h4>
-        <h4>Id:{dentista.id}</h4>
+        <h4>Usuario: {dentista.username}</h4>
+        <h4>Id: {dentista.id}</h4>
 
         <Link to={"/detalles/"+dentista.id}>
           <button>Ver detalles</button>
