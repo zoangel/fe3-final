@@ -33,7 +33,7 @@ const Navbar = () => {
         <h4>Destacados</h4>
       </Link>
       {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
-      <button onClick={handleSwitch}>{state.theme==='Dark' ? 'Modo noche 🌚': 'Modo día 🌞'}</button>
+      <button id="buttonTema" onClick={handleSwitch}>{state.theme==='Dark' ? 'Modo noche 🌚': 'Modo día 🌞'}</button>
     </nav>
   )
 }

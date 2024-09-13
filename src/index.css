@@ -153,3 +153,12 @@ tr:nth-child(even) {
   background-color: white;
   color: black;
 }
+
+#buttonTema {
+  border:none;
+  border-radius:5px;
+  font-color:white;
+  background-color: gray;
+  padding:10px;
+  width:120px;
+}
