@@ -3,8 +3,8 @@ import { RESTMethods } from "msw"
 export const reducer = (state, action) => {
     switch (action.type) {
         case "SET_FAVS":
-            return{...state, favs: action.payload}
-        case "SET_DENTISTA":
+            return { ...state, favs: [...state.favs, action.payload] };
+            case "SET_DENTISTA":
             return{...state, dentistas: action.payload}
         case "SET_THEME":
             return{...state, theme: action.payload}
