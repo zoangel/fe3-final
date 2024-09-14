@@ -23,7 +23,7 @@ const Detail = () => {
   return (
     <>
     <main className="main" >
-      <div>
+      <div className='details'>
         <h1>Dentista {detail.name} </h1>
         <h3>Id: {detail.id}</h3>
         <h3>Email: {detail.email}</h3>

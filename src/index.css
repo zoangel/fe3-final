@@ -29,6 +29,11 @@ body {
 
 main {
   flex:1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
 }
 
 code {
@@ -39,8 +44,9 @@ code {
   background-color: rgba(136, 136, 136, 0.116);
   padding: 10px;
   border: none;
-  width: 100%;
   cursor: pointer;
+  color: white;
+  font-weight: 300;
 }
 
 h1{
@@ -52,13 +58,16 @@ nav {
   justify-content: space-around;
   padding: 1rem;
   background-color:antiquewhite;
-
+  color: black;
+  height: 100px;
+  align-items: center;
 }
 
-a {
+nav > a {
   text-decoration: none;
   margin: 5px;
   cursor: pointer;
+  font-size: 20px;
 }
 a:hover {
   color: rgb(136, 136, 136);
@@ -73,6 +82,9 @@ footer {
   height: 40px;
   margin-top: 2rem;
   background-color:antiquewhite;
+  color: black;
+  align-items: center;
+  height: 100px;
 }
 
 footer > img{
@@ -100,12 +112,13 @@ form{
   align-items: center;
   width: 200px;
   padding: 0.5rem 0.5rem 0 0.5rem;
-  border: 0.5px solid rgb(136, 136, 136);
+  border: 3px solid rgb(39, 39, 39);
   border-radius: 15px;
+  margin: 10px;
 }
 
 .card:hover{
-  border: 0.5px solid rgb(206, 217, 142);
+  border: 3px solid rgb(206, 217, 142);
 }
 
 .card-grid{
@@ -157,8 +170,31 @@ tr:nth-child(even) {
 #buttonTema {
   border:none;
   border-radius:5px;
-  font-color:white;
+  color:white;
   background-color: gray;
   padding:10px;
   width:120px;
+}
+
+button{
+  background-color: rgb(187, 218, 245);
+  color: black;
+  border-radius: 20%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 12px;
+  padding: 5px;
+  border-width: 2px;
+}
+
+button:hover{
+  color: white;
+  background-color: rgb(50, 89, 148);
+  cursor: pointer;
+}
+
+.details{
+ background-color: gray;
+  text-align: center;
+  padding: 30px;
+  width: 30vw;
 }
